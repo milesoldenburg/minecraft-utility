@@ -1,0 +1,76 @@
+@import url('ui-lightness/jquery-ui-1.10.0.custom.min.css');
+@import url('header.css');
+
+body {
+    background: url(../images/bg_main.png) left top repeat;
+    color: #e0d0d0;
+    font-family: sans-serif;
+    margin: 0px;
+}
+
+body a {
+    color: #aaaaff;
+}
+
+.recipe-container {
+    border: 1px #999999 solid;
+    margin-bottom: 5px;
+    padding: 10px;
+}
+
+.recipe-container input.recipe {
+    margin-right: 10px;
+}
+
+.recipe-container input.recipe-needed {
+    margin-right: 10px;
+}
+
+a.add-item, a.reset, a.submit {
+    background: rgb(174, 255, 187);
+    border: 1px rgb(36, 143, 36) solid;
+    color: rgb(36, 143, 36);
+    display: block;
+    font-size: 140%;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    text-decoration: none;
+}
+
+a.submit {
+    background: rgb(174, 249, 255);
+    border: 1px rgb(36, 83, 143) solid;
+    color: rgb(36, 83, 143);
+}
+
+a.reset {
+    background: rgb(255, 174, 213);
+    border: 1px rgb(143, 36, 36) solid;
+    color: rgb(143, 36, 36);
+}
+
+.submission-submit {
+    float: left;
+    width: 50%;
+}
+
+.submission-reset {
+    float: left;
+    width: 50%;
+}
+
+.errors {
+    background: #f8cccc;
+    border: 1px #df7474 solid;
+    color: #df7474;
+    display: none;
+    margin: 10px 0px 10px 0px;
+    padding: 5px;
+}
+
+.content {
+    font-size: 160%;
+    margin: 10px auto 0px auto;
+    width: 95%;
+}

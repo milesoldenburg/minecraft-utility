@@ -1,0 +1,8 @@
+.DS_Store
+platforms/ios/build
+platforms/ios/CordovaLib/build
+platforms/ios/www/*
+
+platforms/ios/CordovaLib/CordovaLib.xcodeproj/xcuserdata/*
+platforms/ios/MinecraftUtility.xcodeproj/project.xcworkspace*
+platforms/ios/MinecraftUtility.xcodeproj/xcuserdata/moldenbu.xcuserdatad/*
