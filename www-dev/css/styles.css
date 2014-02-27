@@ -74,3 +74,20 @@ a.reset {
     margin: 10px auto 0px auto;
     width: 95%;
 }
+
+.room table td {
+    background: #999;
+    height: 80px;
+    margin: 0px auto;
+    text-align: center;
+    width: 80px;
+}
+
+.room table td:hover {
+    background: #CCC;
+    cursor: pointer;
+}
+
+.room table td.selected {
+    background: rgb(174, 249, 255);
+}

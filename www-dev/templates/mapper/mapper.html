@@ -1,5 +1,11 @@
-<h3>Starting Coordinates</h3>
-<p>Enter the coordinates of where you want the map to be centered.</p>
+<h3>Dimensions</h3>
+Rows: <input type="text" value="3" name="rows" />
+<br/>
+Columns: <input type="text" value="5" name="columns" />
+<br/><br/>
+
+<h3>Feature Coordinates</h3>
+<p>Enter the coordinates of the feature you want displayed.</p>
 
 X: <input type="text" value="0" name="x" />
 <br/>
@@ -9,21 +15,16 @@ Z: <input type="text" value="0" name="z" />
 <h3>Zoom Level</h3>
 <p>Enter the zoom level you want every map to be at.</p>
 <select name="zoom-level">
-    <option value="0">0 (128x128)</option>
-    <option value="1">1 (256x256)</option>
-    <option value="2" selected="selected">2 (512x512)</option>
-    <option value="3">3 (1024x1024)</option>
-    <option value="4">4 (2048x2048)
+    <option value="128">0 (128x128)</option>
+    <option value="256">1 (256x256)</option>
+    <option value="512" selected="selected">2 (512x512)</option>
+    <option value="1024">3 (1024x1024)</option>
+    <option value="2048">4 (2048x2048)
 </select>
-<br/>
-
-<h3>Dimensions</h3>
-Rows: <input type="text" value="3" name="rows" />
-<br/>
-Columns: <input type="text" value="3" name="columns" />
 <br/><br/>
 
-<a href="#" class="submit">Calculate</a>
+<div class="room">
+    <p>Select the square you want your feature to be centered in.</p>
+    <table></table>
+</div>
 <br/><br/>
-
-<div class="results"></div>
