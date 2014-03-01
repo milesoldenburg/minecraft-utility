@@ -36,11 +36,13 @@ define(['jquery', 'backbone', 'text!templates/mapper/mapper.html'], function($, 
                 this.renderMap();
             },
             'keyup input[name="x"]' : function(event){
-                this.mapOptions.x = parseInt($(event.currentTarget).val(), 10);
+                this.mapOptions.x = this.closestMultiple(parseInt($(event.currentTarget).val(), 10));                
+                $('.actual-x').html(this.mapOptions.x);
                 this.renderMap();
             },
             'keyup input[name="z"]' : function(event){
-                this.mapOptions.z = parseInt($(event.currentTarget).val(), 10);
+                this.mapOptions.z = this.closestMultiple(parseInt($(event.currentTarget).val(), 10));
+                $('.actual-z').html(this.mapOptions.z);
                 this.renderMap();
             },
             'click .room table td' : function(event){
@@ -76,6 +78,15 @@ define(['jquery', 'backbone', 'text!templates/mapper/mapper.html'], function($, 
             this.renderMap();
             
             return this;
+        },
+        'closestMultiple' : function(c)  {
+            // Compute the closest multiple of 128
+            var closestMultiple = Math.round(c / 128) * 128;
+            if (closestMultiple == -0) {
+                closestMultiple = 0;
+            }
+            
+            return closestMultiple;
         },
         'drawMap' : function(){
             var table = '';
