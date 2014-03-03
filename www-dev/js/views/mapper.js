@@ -116,7 +116,7 @@ define(['jquery', 'backbone', 'text!templates/mapper/mapper.html'], function($, 
                 var row = parseInt($(this).parent().attr('data-row'), 10);
                 
                 var x = ((self.mapOptions.centerCol - col) * -self.mapOptions.zoom) + self.mapOptions.x;
-                var z = ((self.mapOptions.centerRow - row) * self.mapOptions.zoom) + self.mapOptions.z;
+                var z = ((self.mapOptions.centerRow - row) * -self.mapOptions.zoom) + self.mapOptions.z;
                 
                 $(this).html('[' + x + ', ' + z + ']'); 
             });
