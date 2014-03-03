@@ -6,7 +6,8 @@ define(
     'views/header',
     'views/modules',
     'views/calculator',
-    'views/mapper'
+    'views/mapper',
+    'views/portalplanner'
 ],
 function(
     $,
@@ -15,7 +16,8 @@ function(
     HeaderView,
     ModulesView,
     CalculatorView,
-    MapperView
+    MapperView,
+    PortalPlannerView
 ){
 
     var router = Backbone.Router.extend({
@@ -40,6 +42,12 @@ function(
                     this.mapperView = new MapperView();
                 }
                 App.showView(this.mapperView);
+            },
+            'portal-planner' : function(){
+                if (typeof this.portalPlannerView === 'undefined') {
+                    this.portalPlannerView = new PortalPlannerView();
+                }
+                App.showView(this.portalPlannerView);
             }
         }
     });
