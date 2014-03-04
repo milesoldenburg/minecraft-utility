@@ -21,6 +21,11 @@ define(['jquery', 'backbone', 'text!templates/portal-planner/portal-planner.html
 					newNetherX = Math.floor(overworldX/8);
 					newNetherY = Math.floor(overworldY);
 					newNetherZ = Math.floor(overworldZ/8);
+					
+					if(newNetherY>128)
+					{
+						newNetherY = 128;
+					}
                     
                     $('input[name="nether-x"]').val(newNetherX);
                     $('input[name="nether-y"]').val(newNetherY);
