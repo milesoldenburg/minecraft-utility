@@ -17,6 +17,10 @@ define(['jquery', 'backbone', 'text!templates/portal-planner/portal-planner.html
                     // an overworld coordinate was changed
                     // compute nether coords
                     var newNetherX, newNetherY, newNetherZ;
+					
+					newNetherX = Math.floor(overworldX/8);
+					newNetherY = Math.floor(overworldY);
+					newNetherZ = Math.floor(overworldZ/8);
                     
                     $('input[name="nether-x"]').val(newNetherX);
                     $('input[name="nether-y"]').val(newNetherY);
@@ -25,6 +29,10 @@ define(['jquery', 'backbone', 'text!templates/portal-planner/portal-planner.html
                     // a nether coordinate was changed
                     // compute overworld coords
                     var newOverworldX, newOverworldY, newOverworldZ;
+					
+					newOverworldX = Math.floor(netherX*8);
+					newOverworldY = Math.floor(netherY);
+					newOverworldZ = Math.floor(netherZ*8);
                     
                     $('input[name="overworld-x"]').val(newOverworldX);
                     $('input[name="overworld-y"]').val(newOverworldY);
