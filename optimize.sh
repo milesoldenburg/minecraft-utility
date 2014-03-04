@@ -8,6 +8,9 @@ rm -r www/templates
 rm www/app.build.js
 rm www/build.txt
 
+# Remove source recipes file
+rm www/js/data/recipes.js
+
 # Prepare cordova
 cordova prepare
 
