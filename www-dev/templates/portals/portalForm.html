@@ -27,8 +27,8 @@ function convert()
 	
 	if ((neX==null || neX=="")&&(neY==null || neY=="")&&(neZ==null || neZ==""))
 	{
-		neX=ovX/8;
-		neZ=ovZ/8;
+		neX=floor(ovX)/8;
+		neZ=floor(ovZ)/8;
 		if(neY>128)
 		{
 			neY=128;
@@ -37,9 +37,10 @@ function convert()
 	}
 	else if ((ovX==null || ovX=="")&&(ovY==null || ovY=="")&&(ovZ==null || ovZ==""))
 	{
-		ovX=neX*8;
-		ovZ=neZ*8;
+		ovX=floor(neX)*8;
+		ovZ=floor(neZ)*8;
 		ovY=neY;
 	}
+	
 }
 </script>
