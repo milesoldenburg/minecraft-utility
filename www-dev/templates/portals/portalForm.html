@@ -1,0 +1,45 @@
+<p>Overworld Coords</p>
+<form>
+	X: <input type="text" name="ovX" id="ovX">
+	Y: <input type="text" name="ovY" id="ovY">
+	Z: <input type="text" name="ovZ" id="ovZ">
+</form>
+<p>Nether Coords</p>
+<form>
+	X: <input type="text" name="neX" id="neX">
+	Y: <input type="text" name="neY" id="neY">
+	Z: <input type="text" name="neZ" id="neZ">
+</form>
+
+<script>
+function convert()
+{
+	//these vars to get overworld coords from form
+	var ovX = parseInt(document.getElementById('ovX').value);
+	var ovZ = parseInt(document.getElementById('ovY').value);
+	var ovY = parseInt(document.getElementById('ovZ').value);
+	//these vars to get nether coords from form
+	var neX = parseInt(document.getElementById('neX').value);
+	var neY = parseInt(document.getElementById('neY').value);
+	var neZ = parseInt(document.getElementById('neZ').value);
+	//function will need to decide here what values have been entered by the user
+	//an if/else statement will determine how the calculation has been run
+	
+	if ((neX==null || neX=="")&&(neY==null || neY=="")&&(neZ==null || neZ==""))
+	{
+		neX=ovX/8;
+		neZ=ovZ/8;
+		if(neY>128)
+		{
+			neY=128;
+		}
+		neY=ovY;
+	}
+	else if ((ovX==null || ovX=="")&&(ovY==null || ovY=="")&&(ovZ==null || ovZ==""))
+	{
+		ovX=neX*8;
+		ovZ=neZ*8;
+		ovY=neY;
+	}
+}
+</script>
